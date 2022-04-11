@@ -720,6 +720,12 @@ p {
         z-index: 0;
         right: 8px;
     }
+    .floaties.one {
+        margin: 50px 60px -50px;
+    }
+    .floaties.two {
+        margin: -50px 80px 50px;
+    }
     .flex-three {
         width: 950px;
     }
@@ -777,6 +783,7 @@ p {
     }
     .section-three {
         width: 765px;
+        height: 2030px;
     }
     .downward-path {
         width: 160px;
@@ -820,9 +827,6 @@ p {
     .path-left-div.three {
         bottom: 1980px;
     }
-    .section-three {
-        height: 2030px;
-    }
 }
 @media (max-width: 768px) { 
     .flex {
@@ -831,10 +835,16 @@ p {
     }
     .clouds-background-small {
         display: block;
-        height: 200px;
+        width: 200px;
         position: absolute;
         z-index: 0;
         right: 8px;
+    }
+    .arrow-up {
+        position: absolute;
+        width: 70px;
+        right: 25px;
+        top: 15px;
     }
     .clouds-background-medium {
         display: none;
@@ -844,7 +854,7 @@ p {
         margin: 50px 10px;
     }
     .floaties.one {
-        margin: 50px 10px -50px;
+        margin: 50px -30px -50px;
         }
     .button {
         width: 500px;
@@ -864,6 +874,7 @@ p {
     }
     .section-three {
         width: 570px;
+        height: 1940px;
     }
     .title-outline {
         width: 550px;
@@ -940,9 +951,6 @@ p {
     }
     .path-left-div.three {
         bottom: 2145px;
-    }
-    .section-three {
-        height: 1940px;
     }
     .btn {
         width: 560px;
@@ -1021,6 +1029,7 @@ p {
     }
     .section-three {
         width: 325px;
+        height: 2720px;
     }
     .title-outline {
         width: 320px;
@@ -1049,17 +1058,14 @@ p {
         right: 0px;
         margin: 0 auto;
     }
-    .text-block > h1,
+    .path-right-div > .text-block > h2,
     .text-block > h2 {
-        display: inline;
-    }
-    .text-block > h2 {
-        margin-left: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .text-block {
-        display: inline-table;
-        align-self: center;
-        margin-top: 20px;
+        text-align: center;
+        margin: 20px auto 0;
         left: 0px;
         bottom: 0px;
     }
@@ -1079,8 +1085,9 @@ p {
         margin-right: 0px;
     }
     .path-right-div > .text-block {
+        width: 325px;
         bottom: 0px;
-        text-align: left;
+        text-align: center;
         left: 510px;
     }
     .path-right-div > .circles {
@@ -1116,9 +1123,6 @@ p {
         bottom: 0px;
         left: -240px;
         margin-bottom: -50px;
-    }
-    .section-three {
-        height: 2450px;
     }
     .circles-main {
         left: 0px;
