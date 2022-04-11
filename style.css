@@ -839,9 +839,13 @@ p {
     .clouds-background-medium {
         display: none;
     }
+
     .floaties {
         margin: 50px 10px;
     }
+    .floaties.one {
+        margin: 50px 10px -50px;
+        }
     .button {
         width: 500px;
         font-size: 30px;
@@ -963,12 +967,12 @@ p {
         height: 250px;
     }
     .clouds-background-small {
-        height: 250px;
-        opacity: 0.1;
+        height: auto;
+        width: 200px;
+        top: 10px;
     }
     .arrow-up {
-        opacity: 0.6;
-        top: 70px;
+        top: 15px;
         right: 25px;
     }
     .section-one {
