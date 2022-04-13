@@ -538,8 +538,6 @@ p {
     display: block;
     bottom: 341px;
     left: 39px;
-    animation: 20s spin-right linear infinite -1s;
-    border:1px solid gray; 
 }
 .circles-main.two {
     position: relative;
