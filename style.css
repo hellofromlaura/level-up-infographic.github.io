@@ -241,6 +241,10 @@ p {
     filter: brightness(1.2);
     color: #fff;
 }
+.nohover:hover {
+    filter: none;
+    cursor: default;
+}
 .section-two {
     height: 450px;
 }
@@ -535,6 +539,7 @@ p {
     left: 40px;
 }
 .path-left-div.three {
+    height: 330px;
     bottom: 1852px;
 }
 .molecule {
