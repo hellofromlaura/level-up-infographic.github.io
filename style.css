@@ -1166,6 +1166,12 @@ p {
     h3 {
         font-size: 20px;
     }
+    .not-button {
+        text-align: center;
+        margin: 50px auto;
+
+        padding: 25px;
+    }
     .header {
         display: flex;
         flex-direction: column;
@@ -1178,13 +1184,13 @@ p {
     .clouds-background-small {
         height: auto;
         width: 150px;
-        top: 25px;
-        right: 20px;
+        top: 15px;
+        right: 10px;
     }
     .arrow-up {
         width: 40px;
-        top: 45px;
-        right: 30px;
+        top: 30px;
+        right: 20px;
     }
     .section-one {
         height: 500px;
@@ -1214,7 +1220,7 @@ p {
         left: 152px;
     }
     .circles-trio {
-        top: 160px;
+        top: 185px;
         width: 395px;
         height: 280px;
     }
