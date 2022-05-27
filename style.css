@@ -3,7 +3,8 @@ body, html { overflow-x:hidden; }
 body {
     min-width: 320px;
     font-family: CiscoSans,Arial,sans-serif;
-    color: #0d274d;
+    color: #424445;
+    font-weight: 300;
     text-rendering: optimizeLegibility;
     background: #f2f2f2;
 }
@@ -19,7 +20,7 @@ h2 {
 }
 h3 {
     font-size: 30px;
-    font-weight:500;
+    font-weight:300;
     margin: 0;
 }
 p {
@@ -60,7 +61,7 @@ p {
 }
 .flex-three {
     display: flex;
-    width: 980px;
+    width: 964px;
     height: 370px;
     margin: 50px auto;
 }
@@ -195,17 +196,27 @@ p {
     opacity: 0.8;
     mix-blend-mode: multiply;
 }
-.circle > p {
+.circles-trio > p {
     position: absolute;
-    top: 43%;
-    left: 32%;
     text-align: center;
     font-size: 18px;
     line-height: 1.2;
 }
-.circles-trio > .circle:nth-child(2) {margin: -260px 0px 0px 240px;}
-.circles-trio > .circle:nth-child(3) {margin: -100px auto 0px;}
-.circles-trio > .circle:nth-child(4) {margin: -335px auto 0px; opacity: 0.25; mix-blend-mode: overlay;}
+.circles-trio > .one {
+    top: 115px;
+    left: -135px;
+}
+.circles-trio > .two {
+    top: 115px;
+    right: -135px;
+}
+.circles-trio > .three {
+    top: 470px;
+    left: 200px;
+}
+.circles-trio > .circle:nth-child(2) {margin: -20px 0px 0px 0px;}
+.circles-trio > .circle:nth-child(3) {margin: -260px 0px 0px 240px;}
+.circles-trio > .circle:nth-child(5) {margin: -100px auto 0px; opacity: 0.25; mix-blend-mode: multiply;}
 
 .circle-small {
     position: relative;
@@ -230,12 +241,23 @@ p {
     margin: 10px auto 70px;
     padding: 30px 60px;
     border-radius: 50px;
-    background-color: #00bceb;
+    background-color: #0d274d;
     font-weight: 400;
     font-size: 38px;
     line-height: 24px;
     text-decoration: none;
     text-align: center;
+}
+.not-button {
+    width: fit-content;
+    display: block;
+    position: relative;
+    margin: 50px auto 100px;
+    padding: 25px 50px;
+    background-color: #E9E9E9;
+    border: 2px solid #0d274d;
+    border-radius: 13px;
+    z-index: 10;
 }
 .button:hover {
     filter: brightness(1.2);
@@ -295,7 +317,7 @@ p {
     margin: 0 auto;
     width: 290px;
     bottom: 487px;
-    animation: 20s spin-right linear infinite -1s;
+    animation: 100s spin-right linear infinite -1s;
 }
 
 @keyframes spin-right {
@@ -416,11 +438,17 @@ p {
     bottom: 16px;
     right: 100px;
 }
+.two > .path-side-one {
+    position: relative;
+    width: 250px;
+    bottom: -26px;
+    right: 100px;
+}
 .circles {
     position: relative;
     height: 206px;
     width: 206px;
-    bottom: 280px;
+    bottom: 295px;
 }
 .circle-main {
     position: relative;
@@ -437,7 +465,7 @@ p {
     width: 200px;
     height: 200px;
     bottom: 180px;
-    animation: 30s spin-right linear infinite -1s;
+    animation: 100s spin-right linear infinite -1s;
 }
 .arrows-main {
     position: relative;
@@ -449,7 +477,7 @@ p {
 .text-block {
     position: relative;
     width: 625px;
-    bottom: 460px;
+    bottom: 455px;
     left: 250px;
 }
 .text-block > h2 {
@@ -464,17 +492,14 @@ p {
 }
 .path-one {
     position: relative;
-    width: 350px;
-    bottom: 380px;
-    left: 80px;
+    width: 680px;
+    bottom: 350px;
+    left: 152px;
 }
 .path-right-div {
     position: relative;
     bottom: 555px;
     right: 100px;
-}
-.path-right-div > .text-block > h1 {
-    margin-right: 150px;
 }
 .path-right-div > .text-block > h2 {
     margin-right: 50px;
@@ -483,9 +508,14 @@ p {
     transform: scaleX(-1);
     right: 0;
     left: 830px;
+    bottom: -5px;
+}
+.path-right-div.two > .path-side-one {
+    bottom: -58px;
 }
 .path-right-div > .circles {
     left: 775px;
+    bottom: 270px;
 }
 .path-right-div > .text-block {
     text-align: right;
@@ -504,17 +534,28 @@ p {
     left: 500px;
     align-items: center;
 }
+.path-left-div.two > .circles {
+    bottom: 245px;
+}
+.path-left-div.two > .text-block {
+    bottom: 425px;
+}
 .path-two {
-    width: 330px;
-    top: 20px;
+    width: 700px;
+    position: relative;
+    top: 44px;
+    right: 50px;
 }
 .path-three {
     display: none;
 }
+.path-two.two {
+    top: 95px;
+}
 .path-four {
     position: relative;
-    width: 490px;
-    bottom: 405px;
+    width: 750px;
+    bottom: 330px;
     left: 80px;
 }
 .path-left-div.two {
@@ -526,7 +567,7 @@ p {
     display: block;
     bottom: 340px;
     left: 40px;
-    animation: 20s spin-right linear infinite -1s;
+    animation: 100s spin-right linear infinite -1s;
 }
 .path-right-div.two {
     bottom: 1370px;
@@ -542,6 +583,21 @@ p {
     height: 330px;
     bottom: 1852px;
 }
+.three > .path-side-one {
+    bottom: -75px;
+}
+.two.path-right-div > .circles {
+    bottom: 220px;
+}
+.path-right-div.two > .text-block {
+    bottom: 405px;
+}
+.path-left-div.three > .circles {
+    bottom: 200px;
+}
+.path-left-div.three > .text-block {
+    bottom: 375px;
+}
 .molecule {
     position: relative;
     width: 120px;
@@ -554,7 +610,7 @@ p {
     width: 80px;
     height: 80px;
     left: 200px;
-    bottom: 2050px;
+    bottom: 2010px;
 }
 .circles-main.two .circle-one.green-color {
     position: relative;
@@ -597,10 +653,10 @@ p {
 }
 .btn {
 	position: relative;
-	margin: 50px auto 0px;
+	margin: 100px auto 0px;
 	width: 600px;
 	border: 3px solid #1E4471;
-	border-radius: 5em;
+	border-radius: 13px;
 	text-align: center;
 	font-size: 30px;
 	line-height: 2em;
@@ -614,12 +670,11 @@ p {
 	left: -30px;
 	border-radius: 100%;
 	transition: all 300ms ease;
-	
 	display: block;
 }
-.dot:nth-child(2) {animation: atom 50s infinite linear -2s;}
+/* .dot:nth-child(2) {animation: atom 50s infinite linear -2s;}
 .dot:nth-child(3) {animation: atom 55s infinite linear -20s;}
-.dot:nth-child(4) {animation: atom 60s infinite linear -50s;}
+.dot:nth-child(4) {animation: atom 60s infinite linear -50s;} */
 .dot:after {
 	content: '';
 	position: absolute;
@@ -629,9 +684,20 @@ p {
 	width: .7em;
 	border-radius: 1em;
 }
-.dot:nth-child(2):after {background: #1E4471;}
-.dot:nth-child(3):after {background: #6ABF4B;}
-.dot:nth-child(4):after {background: #A8A8AC;}
+.dot:nth-child(2):after {
+    background: #1E4471;
+    top: 50px;
+    left: 550px;
+}
+.dot:nth-child(3):after {
+    background: #6ABF4B;
+    left: 200px;
+}
+.dot:nth-child(4):after {
+    background: #A8A8AC;
+    top: 50px;
+    left: 450px;
+}
 
 @keyframes atom {
 	0% {transform: translateX(0) rotate(0);}
@@ -651,7 +717,7 @@ p {
     }
     .header-text {
         position: relative;
-        padding: 40px 80px;
+        padding: 70px;
     }
     .header-images {
         width: 875px;
@@ -720,6 +786,34 @@ p {
         animation: hide 10s infinite linear;
     }
  }
+ @media (max-width: 1330px) {
+    .text-block {
+        left: 230px;
+    }
+    .path-right-div > .text-block {
+        left: 120px;
+    }
+    .path-one {
+        bottom: 351px;
+        left: 44px;
+    }
+    .path-two {
+        width: 675px;
+        top: 43px;
+        right: 232px;
+    }
+    .path-four {
+        width: 676px;
+        bottom: 332px;
+        left: 40px;
+    }
+    .path-two.two {
+        top: 93px;
+    }
+    .section-three {
+        height: 2010px;
+    }
+ }
 
 @media (max-width: 992px) {
     .header-text {
@@ -741,23 +835,40 @@ p {
         margin: -50px 80px 50px;
     }
     .flex-three {
-        width: 950px;
+        width: 895px;
     }
     .path-right-div {
         right: 165px;
     }
-    .path-four {
-        left: 55px;
-    }
     .text-block {
-        width: 565px;
+        width: 550px;
         left: 240px;
     }
     .path-right-div > .text-block {
         left: 170px;
     }
     .path-one {
-        bottom: 410px;
+        width: 620px;
+        bottom: 380px;
+        left: 29px;
+    }
+    .path-two {
+        width: 615px;
+        top: 57px;
+        right: 180px;
+    }
+    .path-two.two {
+        top: 110px;
+    }
+    .three > .path-side-one {
+        bottom: -91px;
+    }
+    .path-right-div > .path-side-one {
+        left: 815px;
+        bottom: -11px;
+    }
+    .two > .path-side-one {
+        bottom: -33px;
     }
     .path-right-div {
         bottom: 590px;
@@ -769,7 +880,11 @@ p {
         bottom: 995px;
     }
     .path-four {
-        bottom: 410px;
+        width: 600px;
+        bottom: 328px;
+    }
+    .path-right-div.two > .path-side-one {
+        bottom: -61px;
     }
     .path-right-div.two {
         bottom: 1405px;
@@ -778,7 +893,7 @@ p {
         bottom: 1895px;
     }
     .section-three {
-        height: 2100px;
+        height: 2010px;
     }
  }
  @media (max-width: 930px) { 
@@ -799,6 +914,15 @@ p {
         right: -145px;
         top: 40px;
     }
+    .floaties.one {
+        margin: 50px 0px -50px;
+    }
+    .circles-trio > .one {
+        left: -105px;
+    }
+    .circles-trio > .two {
+        right: -105px;
+    }
     .flex-three {
         width: 715px;
     }
@@ -811,20 +935,29 @@ p {
         left: 232px;
     }
     .circles-main {
-        left: 495px;
+        left: 550px;
     }
     .path-left-div {
         left: 75px;
     }
     .text-block {
-        width: 475px;
+        width: 420px;
         bottom: 480px;
+        left: 230px;
+    }
+    .path-one {
+        display: none;
+    }
+    .path-side-one {
+        right: 75px;
     }
     .path-right-div {
-        right: 290px;
+        right: 329px;
+        bottom: 565px;
     }
+    
     .path-right-div > .text-block {
-        left: 270px;
+        left: 330px;
         bottom: 495px;
     }
     .flex.path {
@@ -832,21 +965,28 @@ p {
         left: 595px;
     }
     .path-left-div.two {
-        bottom: 1040px;
+        bottom: 980px;
+    }
+    .path-four,
+    .path-two {
+        display: none;
+    }
+    .two > .path-side-one {
+        right: 75px;
     }
     .path-four {
         width: 410px;
         left: 40px;
     }
     .path-right-div.two {
-        bottom: 1450px;
+        bottom: 1400px;
     }
     .circles-main.two {
         bottom: 2185px;
         left: 70px;
     }
     .path-left-div.three {
-        bottom: 1980px;
+        bottom: 1905px;
     }
 }
 @media (max-width: 768px) { 
@@ -875,13 +1015,32 @@ p {
     .clouds-background-medium {
         display: none;
     }
-
     .floaties {
         margin: 50px 10px;
     }
     .floaties.one {
-        margin: 50px -30px -50px;
-        }
+        margin: 0px -30px -50px;
+    }
+    .floaties.two {
+        margin: 35px 0px 50px;
+    }
+    .circles-trio {
+        top: 100px;
+    }
+    .circles-trio > .one {
+        left: 80px;
+        top: -50px;
+    }
+    .circles-trio > .two {
+        right: 80px;
+        top: -50px;
+    }
+    .circles-trio > .three {
+        top: 430px;
+    }
+    .btn {
+        width: 490px;
+    }
     .button {
         width: 500px;
         font-size: 30px;
@@ -899,8 +1058,8 @@ p {
         display: flex;
     }
     .section-three {
-        width: 570px;
-        height: 1940px;
+        width: 545px;
+        height: 2030px;
     }
     .title-outline {
         width: 550px;
@@ -909,7 +1068,8 @@ p {
         left: 280px;
     }
     .path-left-div {
-        left: 105px;
+        left: 75px;
+        bottom: 200px;
     }
     .circles-main {
         left: 380px;
@@ -918,13 +1078,19 @@ p {
         right: 60px;
         bottom: 295px;
     }
+    .dot:nth-child(2):after {
+        left: 350px;
+    }
+    .circle-one.blue-color {
+        display: none;
+    }
     .arrows-main {
         left: 17px;
     }
     .text-block {
         width: 305px;
         left: 150px;
-        bottom: 510px;
+        bottom: 495px;
     }
     .path-one {
         bottom: 450px;
@@ -956,11 +1122,17 @@ p {
     }
     .path-right-div > .text-block {
         left: 520px;
-        bottom: 525px;
+        bottom: 510px;
+    }
+    .path-left-div.two > .text-block {
+        bottom: 480px;
     }
     .path-right-div > .flex.path {
         bottom: 40px;
         left: 745px;
+    }
+    .path-right-div.two > .text-block {
+        bottom: 455px;
     }
     .path-left-div.two {
         bottom: 1105px;
@@ -978,9 +1150,6 @@ p {
     .path-left-div.three {
         bottom: 2145px;
     }
-    .btn {
-        width: 560px;
-    }
     @keyframes atom {
         0% {transform: translateX(0) rotate(0);}
         30%{transform: translateX(500px) rotate(0);}
@@ -991,6 +1160,9 @@ p {
 }
 
 @media (max-width: 576px) { 
+    h1 {
+        margin: 75px 0px;
+    }
     h3 {
         font-size: 20px;
     }
@@ -1006,12 +1178,13 @@ p {
     .clouds-background-small {
         height: auto;
         width: 150px;
-        top: 50px;
+        top: 25px;
+        right: 20px;
     }
     .arrow-up {
         width: 40px;
-        top: 65px;
-        right: 25px;
+        top: 45px;
+        right: 30px;
     }
     .section-one {
         height: 500px;
@@ -1021,25 +1194,39 @@ p {
         height: 100px;
         margin: 0px;
     }
+    .floaties.two {
+        margin: 100px 0px 50px;
+    }
     .icon:nth-child(1) {width:12px;height:12px;top:60px;left:85px;}
     .icon:nth-child(2) {width:25px;height:25px;top:10px;left:50px;}
     .icon:nth-child(3) {width:15px;height:15px;top:35px;left:35px;}
     .icon:nth-child(4) {width:12px;height:12px;top:55px;left:75px;}
     .icon:nth-child(5) {width:10px;height:10px;top:70px;left:55px;}
     .icon:nth-child(6) {width:5px;height:5px;top:10px;left:75px;}
+    .circles-trio > .one {
+        left: 75px;
+    }
+    .circles-trio > .two {
+        right: -65px;
+    }
+    .circles-trio > .three {
+        top: 295px;
+        left: 152px;
+    }
     .circles-trio {
-        width: 335px;
+        top: 160px;
+        width: 395px;
         height: 280px;
     }
     .circle {
         width: 175px;
         height: 175px;
     }
-    .circle > p {
+    .circles-trio > p {
         left: 25%;
     }
-    .circles-trio > .circle:nth-child(2) {margin: -175px 0px 0px 160px;}
-    .circles-trio > .circle:nth-child(3) {margin: -70px auto 0px;}
+    .circles-trio > .circle:nth-child(2) {margin: -95px 0px 0px 30px;}
+    .circles-trio > .circle:nth-child(3) {margin: -175px 0px 32px 190px;}
     .circle-small {
         margin: -160px auto 0px;
         width: 25px;
@@ -1059,7 +1246,7 @@ p {
     }
     .section-three {
         width: 325px;
-        height: 2720px;
+        height: 2790px;
     }
     .title-outline {
         width: 320px;
@@ -1078,7 +1265,10 @@ p {
         flex-direction: column;
         bottom: 0px;
         left: 0px;
-        margin-top: 50px;
+        margin-top: 0px;
+    }
+    .text-block > h1 {
+        margin: 20px auto;
     }
     .path-side-one {
         display: none;
@@ -1111,14 +1301,11 @@ p {
         bottom: 260px;
         left: 730px;
     }
-    .path-right-div > .text-block > h1 {
-        margin-right: 0px;
-    }
     .path-right-div > .text-block {
         width: 325px;
         bottom: 0px;
         text-align: center;
-        left: 510px;
+        left: 520px;
     }
     .path-right-div > .circles {
         bottom: 0px;
@@ -1137,17 +1324,26 @@ p {
         left: -112px;
     }
     .path-left-div.two {
-        bottom: 0px;
+        bottom: -290px;
     }
     .path-left-div.two > .path-three.show-mobile-path {
         bottom: 320px;
         transform: rotate(41deg);
     }
+    .path-left-div.two > .text-block {
+        bottom: 245px;
+    }
     .path-right-div.two {
-        bottom: 0px;
+        bottom: -270px;
     }
     .path-left-div.three {
-        bottom: 0px;
+        bottom: -280px;
+    }
+    .path-right-div.two > .text-block {
+        bottom: 215px;
+    }    
+    .path-left-div.three > .text-block {
+        bottom: 200px;
     }
     .circles-main.two {
         bottom: 0px;
@@ -1156,8 +1352,8 @@ p {
     }
     .circles-main {
         left: 0px;
-        bottom: 350px;
-        margin-left: 240px;
+        bottom: 430px;
+        margin-left: 210px;
         margin-bottom: -150px;
     }
     .outro {
@@ -1174,6 +1370,15 @@ p {
     .dot {
         left: -40px;
     }
+    .dot:nth-child(2):after {
+        top: 33px;
+        left: 300px;
+    }
+    .dot:nth-child(4):after {
+        background: #A8A8AC;
+        top: 33px;
+        left: 250px;
+    }
     @keyframes atom {
         0% {transform: translateX(0) rotate(0);}
         30%{transform: translateX(280px) rotate(0);}
@@ -1182,7 +1387,7 @@ p {
         100% {transform: translateX(0) rotate(360deg);}
     }
 }
-@media (max-width: 576px) { 
+/* @media (max-width: 576px) { 
     .header-text {
         padding: 15px 0px 20px 15px;
     }
@@ -1196,4 +1401,4 @@ p {
         top: 95px;
         right: 25px;
     }
-}
+} */
