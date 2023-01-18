@@ -248,7 +248,7 @@ p {
 }
 .path-div .button-div {
     margin: 16.8% auto 0;
-}
+} 
 
 @media screen and (max-width: 1484px) {
     /* Hero */
@@ -614,5 +614,5 @@ p {
     50% {
         transform: scale(0.5);
         opacity: 0.5;
-      }
+    }
 }
