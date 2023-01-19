@@ -43,7 +43,7 @@ p {
     width: 100vw;
     height: 40%;
     padding: 6.8% 4.4% 4.75%;
-    background-image: url('/img/3x/clouds-no-frame.png');
+    background-image: url('img/3x/clouds-no-frame.png');
     background-size: 65.9%;
     background-position: 117% 45%;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@ p {
 }
 .path-div {
     padding: 6.8% 4.4% 4.75%;
-    background-image: url('/img/3x/path.png');
+    background-image: url('img/3x/path.png');
     background-size: 79%;
     background-position: 47% 12%;
     background-repeat: no-repeat;
