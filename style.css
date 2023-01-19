@@ -252,7 +252,7 @@ p {
     /* Hero */
     .hero {
         padding: 6.8% 4.4% 4.4%;
-        background-image: url('/img/clouds-small.png');
+        background-image: url('img/clouds-small.png');
         background-size: 95%;
         background-position: -38% 94%;
     }
