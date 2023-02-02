@@ -34,7 +34,7 @@ p {
     text-decoration: none;
     font-size: 2.6em;
 }
-.db-button:hover {
+.db-button[href]:hover {
     text-decoration: none;
 }
 .db-button[href]:visited {
