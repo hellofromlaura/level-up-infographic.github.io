@@ -34,8 +34,12 @@ p {
     text-decoration: none;
     font-size: 2.6em;
 }
+a[href].db-button {
+    color: #fff;
+}
 .db-button[href]:hover {
     text-decoration: none;
+    color: #fff;
 }
 .db-button[href]:visited {
     color: #fff;
